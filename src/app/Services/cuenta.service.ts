@@ -14,7 +14,7 @@ export class CuentaService {
   }
 
   getData(){
-    return this.httpClient.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
-  //  return this.httpClient.get<Person[]>('http://10.161.1.135:8080/spring-rest-project-backend/persons/');
+    //return this.httpClient.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
+    return this.httpClient.get<Person[]>('http://10.161.1.135:8080/spring-rest-project-backend/persons/');
   }
 }
