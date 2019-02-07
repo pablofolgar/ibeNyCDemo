@@ -7,6 +7,9 @@ import { BalanceConsolidadoComponent } from './Cuentas/Consulta Saldos/balance-c
 import { CuentaService } from './Services/cuenta.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import {MatTableModule } from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginatorModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -16,8 +19,11 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule
+    ],
   providers: [CuentaService],
   bootstrap: [AppComponent]
 })
