@@ -9,7 +9,7 @@ import { CuentaService } from './Services/cuenta.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatPaginatorModule } from '@angular/material';
+import { MatPaginatorModule, MatSortModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { MatPaginatorModule } from '@angular/material';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule
     ],
   providers: [CuentaService],
   bootstrap: [AppComponent]
