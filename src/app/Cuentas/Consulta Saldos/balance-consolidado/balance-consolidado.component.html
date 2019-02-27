@@ -2,22 +2,18 @@
 
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-    <!-- UserId Column -->
+   <!-- PERSON -->
+    <!-- -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> id </th>
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
-    <!-- Id Column -->
     <ng-container matColumnDef="firstName">
       <th mat-header-cell *matHeaderCellDef> First Name </th>
       <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
     </ng-container>
 
-    <!-- Title Column -->
     <ng-container matColumnDef="lastName">
       <th mat-header-cell *matHeaderCellDef> Last Name </th>
       <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
@@ -40,14 +36,15 @@
       <td mat-cell *matCellDef="let element"> {{element.dateOfBirth}} </td>
     </ng-container>
 
-    <!-- Bidy Column -->
     <ng-container matColumnDef="passwd">
       <th mat-header-cell *matHeaderCellDef> Pass </th>
       <td mat-cell *matCellDef="let element"> {{element.passwd}} </td>
     </ng-container>
 
+  <!-- -->
+
     <!-- Para mostrar la lista de Post, hay que descomentar este bloque y comentar el de arriba -->
-    <!--
+    <!-- 
       <ng-container matColumnDef="userId">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> id </th>
       <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
