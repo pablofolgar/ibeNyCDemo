@@ -35,7 +35,7 @@ export class BalanceConsolidadoComponent implements OnInit {
   ngOnInit() { 
       this.moves = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => 
-        this.cuentaService.getData(params.get('tipoDocumento'),"27111437","03200281008","2019-01-01","2019-02-01")
+          this.cuentaService.getData(params.get('tipoDocumento'),params.get('numeroDocumento'),params.get('numeroCuenta'),params.get('fechaDesde'),params.get('fechaHasta'))
       ));
 
       this.moves.subscribe(p => {

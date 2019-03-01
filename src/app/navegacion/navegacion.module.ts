@@ -27,7 +27,7 @@ const reglasDeNavegacion: Routes = [
     path: "", component: MenuPrincipalComponent,
     children: [
       { path: "home-page", component: HomePageComponent},
-      { path: "listado-movimientos-page/:tipoDocumento", component: BalanceConsolidadoComponent },
+      { path: "listado-movimientos-page/:tipoDocumento/:numeroDocumento/:numeroCuenta/:fechaDesde/:fechaHasta", component: BalanceConsolidadoComponent },
       { path: "filtro-movimiento-page", component: FiltroBusquedaMovimientoComponent },
       { path: "error-page", component: ErrorComponent},
       { path: "", redirectTo: "/login", pathMatch: 'full' }

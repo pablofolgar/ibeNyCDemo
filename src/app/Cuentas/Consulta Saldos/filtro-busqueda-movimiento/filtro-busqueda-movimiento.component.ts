@@ -16,7 +16,8 @@ export class FiltroBusquedaMovimientoComponent implements OnInit {
   constructor(private router: Router) { }
 
   buscarMovimientos(){
-    this.router.navigate(["listado-movimientos-page",this.tipoDocumento]);
+    console.log(this.tipoDocumento + "" + this.numeroDocumento + this.numeroCuenta + this.fechaDesde + this.fechaHasta)
+    this.router.navigate(["listado-movimientos-page",this.tipoDocumento, this.numeroDocumento, this.numeroCuenta, this.fechaDesde, this.fechaHasta]);
   }
 
   ngOnInit() {
