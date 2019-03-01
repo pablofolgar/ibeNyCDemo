@@ -9,12 +9,17 @@ import { CuentaService } from './Services/cuenta.service';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MatPaginatorModule, MatSortModule, MatToolbar, MatToolbarModule, MatFormFieldModule, MatCardModule } from '@angular/material';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from './material/material.module';
+import { NavegacionModule } from './navegacion/navegacion.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BalanceConsolidadoComponent
+    BalanceConsolidadoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -23,8 +28,15 @@ import { MatPaginatorModule, MatSortModule } from '@angular/material';
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
-    ],
+    MatSortModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatCardModule,
+    FormsModule, 
+    MaterialModule,
+    NavegacionModule
+  ],
+
   providers: [CuentaService],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,50 @@
+<mat-card>
+    <mat-toolbar color="primary">
+      Bienvenido a Itau Bankline Empresas
+    </mat-toolbar>
+
+  <mat-card-content>
+    <form class="example-form">
+      <table cellspacing="0">
+        <tr>
+          <td>
+            <h3>Por favor, ingrese su usuario y contraseña</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input
+                matInput
+                placeholder="Nombre de Usuario"
+                [(ngModel)]="username"
+                name="username"
+                required
+                (keydown.enter)="login()"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input
+                matInput
+                placeholder="Contraseña"
+                [(ngModel)]="password"
+                type="password"
+                name="password"
+                required
+                (keydown.enter)="login()"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+<!--  <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
+  </mat-card-content>
+  <mat-card-actions align="center">
+    <button mat-raised-button (click)="login()" color="primary">Aceptar</button>
+  </mat-card-actions>
+</mat-card>
