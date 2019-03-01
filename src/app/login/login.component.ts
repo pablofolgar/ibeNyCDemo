@@ -1,25 +1,7 @@
-/*
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
-})
-export class LoginComponent implements OnInit {
-
-  constructor() { }
-
-  msg(){
-    alert('Hello World')
-  }
-  ngOnInit() {
-  }
-
-}
-*/
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../Services/login.service';
+import { LoginResult } from '../Beans/LoginResult';
 
 @Component({
 selector: 'app-login',
@@ -28,7 +10,7 @@ styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private loginService: LoginService) { }
   username: string;
   password: string;
   
@@ -36,15 +18,15 @@ export class LoginComponent implements OnInit {
   
   login() : void 
   {
-    console.log("Login")
-    if(this.username == 'admin' && this.password == 'admin')
-    {
-      this.router.navigate(["movimientos"]);
-    }
-    else 
-    {
-      alert("Credenciales inválidas");
-    }
+      this.loginService.login(this.username,this.password)
+        .subscribe(p => {
+            console.log("Respuesta: " + p);
+            if(p.result){
+              this.router.navigate(["movimientos"]);
+            }else{
+              alert("Credenciales inválidas");
+            }
+        });
   }
 }
 
