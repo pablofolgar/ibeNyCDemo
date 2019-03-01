@@ -14,12 +14,18 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { NavegacionModule } from './navegacion/navegacion.module';
+import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BalanceConsolidadoComponent,
-    LoginComponent
+    LoginComponent,
+    MenuPrincipalComponent,
+    HomePageComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

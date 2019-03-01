@@ -15,5 +15,18 @@ export class LoginService {
     var url = 'http://10.161.36.174:8080/spring-rest-project-backend/login?username='+username+'&password='+password;
     console.log("Calling: " + url)
     return this.httpClient.get<LoginResult>(url);
+    /*
+    let res = new LoginResultImpl(true);
+    return res ;
+  */
   }
 }
+
+/*
+class LoginResultImpl implements LoginResult{
+  result: boolean;
+  constructor(result: boolean){
+    this.result = result;
+  }
+}
+*/

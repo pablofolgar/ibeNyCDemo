@@ -18,15 +18,23 @@ export class LoginComponent implements OnInit {
   
   login() : void 
   {
-      this.loginService.login(this.username,this.password)
-        .subscribe(p => {
-            console.log("Respuesta: " + p);
-            if(p.result){
-              this.router.navigate(["movimientos"]);
-            }else{
-              alert("Credenciales inválidas");
-            }
-        });
+    this.loginService.login(this.username,this.password)
+    .subscribe(p => {
+      console.log("Respuesta: " + p);
+      if(p.result){
+        this.router.navigate(["home-page"]);
+      }else{
+        this.router.navigate(["error-page"]);
+      }
+    });
+    /*
+        let loginResult = this.loginService.login(this.username,this.password);
+        if(loginResult.result){
+          this.router.navigate(["home-page"]);
+        }else{
+          alert("Credenciales inválidas");
+        }
+  */
   }
 }
 
