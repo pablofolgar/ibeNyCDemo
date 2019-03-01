@@ -17,6 +17,7 @@ import { NavegacionModule } from './navegacion/navegacion.module';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ErrorComponent } from './error/error.component';
+import { FiltroBusquedaMovimientoComponent } from './Cuentas/Consulta Saldos/filtro-busqueda-movimiento/filtro-busqueda-movimiento.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ErrorComponent } from './error/error.component';
     LoginComponent,
     MenuPrincipalComponent,
     HomePageComponent,
-    ErrorComponent
+    ErrorComponent,
+    FiltroBusquedaMovimientoComponent
   ],
   imports: [
     BrowserModule,

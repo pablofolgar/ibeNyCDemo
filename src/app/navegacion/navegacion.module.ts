@@ -20,13 +20,15 @@ import {BalanceConsolidadoComponent} from "../Cuentas/Consulta Saldos/balance-co
 import { MenuPrincipalComponent } from '../menu-principal/menu-principal.component';
 import { HomePageComponent } from '../home-page/home-page.component';
 import { ErrorComponent } from '../error/error.component';
+import { FiltroBusquedaMovimientoComponent } from '../Cuentas/Consulta Saldos/filtro-busqueda-movimiento/filtro-busqueda-movimiento.component';
 
 const reglasDeNavegacion: Routes = [
   {
     path: "", component: MenuPrincipalComponent,
     children: [
       { path: "home-page", component: HomePageComponent},
-      { path: "movimientos", component: BalanceConsolidadoComponent },
+      { path: "listado-movimientos-page/:tipoDocumento", component: BalanceConsolidadoComponent },
+      { path: "filtro-movimiento-page", component: FiltroBusquedaMovimientoComponent },
       { path: "error-page", component: ErrorComponent},
       { path: "", redirectTo: "/login", pathMatch: 'full' }
     ]

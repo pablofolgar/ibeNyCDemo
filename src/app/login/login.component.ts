@@ -27,14 +27,16 @@ export class LoginComponent implements OnInit {
         this.router.navigate(["error-page"]);
       }
     });
+    
     /*
-        let loginResult = this.loginService.login(this.username,this.password);
-        if(loginResult.result){
-          this.router.navigate(["home-page"]);
-        }else{
-          alert("Credenciales inválidas");
-        }
-  */
+    //HARDCODEEEEEEEEEEEEEEEEEE
+    let loginResult = this.loginService.login(this.username,this.password);
+    if(loginResult.result){
+      this.router.navigate(["home-page"]);
+    }else{
+      alert("Credenciales inválidas");
+    }
+    */
   }
 }
 

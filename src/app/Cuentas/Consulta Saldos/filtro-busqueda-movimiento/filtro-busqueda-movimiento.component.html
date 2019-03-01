@@ -1,0 +1,87 @@
+<mat-card>
+  <mat-toolbar color="primary">
+    Busqueda de Movimientos
+  </mat-toolbar>
+
+<mat-card-content>
+  <form class="example-form">
+    <table cellspacing="0">
+      <tr>
+        <td>
+          <h3>Ingrese los filtros de busqueda</h3>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="Tipo de Documento"
+              [(ngModel)]="tipoDocumento"
+              name="tipoDocumento"
+              (keydown.enter)="buscarMovimientos()"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="Numero Documento"
+              [(ngModel)]="numeroDocumento"
+              name="numeroDocumento"
+              (keydown.enter)="buscarMovimientos()"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="Numero Cuenta"
+              [(ngModel)]="numeroCuenta"
+              name="numeroCuenta"
+              (keydown.enter)="buscarMovimientos()"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="Fecha Desde"
+              [(ngModel)]="fechaDesde"
+              name="fechaDesde"
+              (keydown.enter)="buscarMovimientos()"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="Fecha Hasta"
+              [(ngModel)]="fechaHasta"
+              name="fechaHasta"
+              (keydown.enter)="buscarMovimientos()"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+      
+    </table>
+  </form>
+<!--  <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
+</mat-card-content>
+<mat-card-actions align="center">
+  <button mat-raised-button (click)="buscarMovimientos()" color="primary">Buscar</button>
+</mat-card-actions>
+</mat-card>
