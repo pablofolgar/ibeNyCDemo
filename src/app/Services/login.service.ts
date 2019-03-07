@@ -25,10 +25,10 @@ export class LoginService {
 }
 
 /*
-*/
 class LoginResultImpl implements LoginResult{
   result: boolean;
   constructor(result: boolean){
     this.result = result;
   }
 }
+  */

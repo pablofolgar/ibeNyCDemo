@@ -1,0 +1,47 @@
+<div class="mat-elevation-z8">
+
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+   <!-- Operaciones Pendientes -->
+    <ng-container matColumnDef="IdOPeracion">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Id Operacion </th>
+      <td mat-cell *matCellDef="let element"> {{element.idOperacion}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tipoOperacion">
+      <th mat-header-cell *matHeaderCellDef> Tipo Operacion </th>
+      <td mat-cell *matCellDef="let element"> {{element.tipoOperacion}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="operacionEstado">
+      <th mat-header-cell *matHeaderCellDef> Estado Operacion </th>
+      <td mat-cell *matCellDef="let element"> {{element.operacionEstado}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cuentaOrigen">
+      <th mat-header-cell *matHeaderCellDef> Cuenta Origen </th>
+      <td mat-cell *matCellDef="let element"> {{element.cuentaOrigen}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cuentaDestino">
+      <th mat-header-cell *matHeaderCellDef> Cuenta Destino </th>
+      <td mat-cell *matCellDef="let element"> {{element.cuentaDestino}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="importe">
+      <th mat-header-cell *matHeaderCellDef> Importe </th>
+      <td mat-cell *matCellDef="let element"> {{element.importe}} </td>
+    </ng-container>
+    
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+  </table>
+  
+  
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      
+
+</div>

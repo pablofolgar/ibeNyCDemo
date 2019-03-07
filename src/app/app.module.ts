@@ -18,6 +18,7 @@ import { MenuPrincipalComponent } from './menu-principal/menu-principal.componen
 import { HomePageComponent } from './home-page/home-page.component';
 import { ErrorComponent } from './error/error.component';
 import { FiltroBusquedaMovimientoComponent } from './Cuentas/Consulta Saldos/filtro-busqueda-movimiento/filtro-busqueda-movimiento.component';
+import { OperacionesPendientesComponent } from './operaciones-pendientes/operaciones-pendientes.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FiltroBusquedaMovimientoComponent } from './Cuentas/Consulta Saldos/fil
     MenuPrincipalComponent,
     HomePageComponent,
     ErrorComponent,
-    FiltroBusquedaMovimientoComponent
+    FiltroBusquedaMovimientoComponent,
+    OperacionesPendientesComponent
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,7 @@ import { MenuPrincipalComponent } from '../menu-principal/menu-principal.compone
 import { HomePageComponent } from '../home-page/home-page.component';
 import { ErrorComponent } from '../error/error.component';
 import { FiltroBusquedaMovimientoComponent } from '../Cuentas/Consulta Saldos/filtro-busqueda-movimiento/filtro-busqueda-movimiento.component';
+import { OperacionesPendientesComponent } from '../operaciones-pendientes/operaciones-pendientes.component';
 
 const reglasDeNavegacion: Routes = [
   {
@@ -29,6 +30,7 @@ const reglasDeNavegacion: Routes = [
       { path: "home-page", component: HomePageComponent},
       { path: "listado-movimientos-page/:tipoDocumento/:numeroDocumento/:numeroCuenta/:fechaDesde/:fechaHasta", component: BalanceConsolidadoComponent },
       { path: "filtro-movimiento-page", component: FiltroBusquedaMovimientoComponent },
+      { path: "operaciones-pendientes-page", component: OperacionesPendientesComponent },
       { path: "error-page", component: ErrorComponent},
       { path: "", redirectTo: "/login", pathMatch: 'full' }
     ]
