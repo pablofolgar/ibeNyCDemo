@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       if(p.result){
         this.router.navigate(["home-page"]);
       }else{
-        this.router.navigate(["error-page"]);
+        alert('Las credenciales son incorrectas')
       }
     });
     
